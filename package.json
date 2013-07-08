@@ -9,6 +9,7 @@
     "node": ">= 0.10"
   },
   "dependencies": {
+    "async": "*",
     "csv": "*",
     "mysql": "*"
   },
