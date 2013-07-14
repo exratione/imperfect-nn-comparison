@@ -24,8 +24,10 @@ module.exports = {
   },
   mysql: {
     // Used to figure out how large a net to cast when looking for near
-    // neighbors. If 0.1 then looking at +/-10% of each value.
-    rangeFactor: 0.05,
+    // neighbors. A near neighbor must have every dimension within [range] of
+    // the search point. This is absolute, so scale it by whatever the maximum
+    // value for the dimensions.
+    range: 0.35,
     // Determining the names of what we're setting up.
     columnPrefix: 'nn',
     tableName: 'nn',
